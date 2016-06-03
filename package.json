@@ -1,0 +1,29 @@
+{
+  "name": "yinibatis",
+  "version": "1.0.0",
+  "description": "MySQL & MariaDB Mapper Module",
+  "main": "./lib/yinibatis.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "ChoulJoo Moon",
+    "email": "mcj41@daum.net",
+    "url": "http://runman93.tistory.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "mysql": "^2.10.2",
+    "xml2js": "^0.4.16"
+  },
+  "files": [
+    "lib/",
+    "Changes.md",
+    "License",
+    "Readme.md",
+    "index.js"
+  ],
+  "engines": {
+    "node": ">= 0.6"
+  }
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper>
+    <sql id="test3" parameterName="inParam">
+        <![CDATA[
+        SELECT zero_nextval('seq', 4) seq
+          FROM DUAL;
+        ]]>
+    </sql>
+
+    <sql id="test4" parameterName="inParam">
+        <![CDATA[
+       select bb from table
+        where cc = '#kkk#'
+          group by '#ccc#'
+      ]]>
+
+        <if test='string.var == null'>
+            order by ccc
+        </if>
+
+        <if test='string.var2 == null'>
+            order by ccc
+        </if>
+
+    </sql>
+
+    <sql id="test5" parameterName="inParam">
+        <![CDATA[
+           CALL Procedure_name('#userid#', '#userPassword#', '#userName#');
+        ]]>
+    </sql>
+
+</mapper>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  SQL MAPPER SAMPLE
+
+  * <sql> </sql>  : SQL Syntex Tag
+  * <if test> </if test> : Condition Tag
+  * sql id= Unique key
+       parameterName="inParam" : default value
+-->
+<mapper>
+    <sql id="test1" parameterName="inParam">
+        <![CDATA[
+       select aa from table
+       where bb = '#userid#'
+         ana cc = '#orger#'
+         and kk = '#userid#'
+    ]]>
+    </sql>
+
+    <sql id="test2" parameterName="inParam">
+        <![CDATA[
+       select address from table
+        where userid = '#userid#'
+      ]]>
+
+        <if test='userid === "Mr_kim" '>
+            group by '#userName#'
+            order by userName
+        </if>
+
+        <if test='userPasswd === "1234" '>
+            group by '#userPasswd#'
+            order by userPasswd
+        </if>
+    </sql>
+
+</mapper>
